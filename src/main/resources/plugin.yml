@@ -1,0 +1,47 @@
+name: Tpa
+version: @version@
+main: live.shino.tpa.Tpa
+api-version: '1.16'
+authors: [ Shino ]
+description: A simple /tpa plugin
+website: https://github.com/shinotheshino/tpa
+commands:
+  tpa:
+    permission: tpa.tpa
+    description: Request to teleport to another player
+    usage: /tpa <player>
+  tpcancel:
+    permission: tpa.tpcancel
+    description: Cancel your pending request
+    usage: /tpcancel
+    aliases: [tpc]
+  tpaccept:
+    permission: tpa.tpaccept
+    description: Accept another player's teleport request
+    usage: /tpaccept [player]
+  tpdeny:
+    permission: tpa.tpdeny
+    description: Deny/reject another player's teleport request
+    usage: /tpdeny [player]
+
+permissions:
+  tpa.*:
+    default: true
+    description: Allows access to all Tpa commands
+    children:
+      tpa.tpa: true
+      tpa.tpcancel: true
+      tpa.tpaccept: true
+      tpa.tpdeny: true
+  tpa.tpa:
+    description: Allows you to use /tpa
+    default: true
+  tpa.tpcancel:
+    description: Allows you to use /tpcancel
+    default: true
+  tpa.tpaccept:
+    description: Allows you to use /tpaccept
+    default: true
+  tpa.tpdeny:
+    description: Allows you to use /tpdeny
+    default: true
