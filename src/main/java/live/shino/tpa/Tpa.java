@@ -79,7 +79,7 @@ public final class Tpa extends JavaPlugin {
                             ChatColor.ITALIC + ""
                         +   ChatColor.GOLD + sender.getName() + " is requesting to teleport to you. To accept, type "
                         +   ChatColor.RED + "/tpaccept " + sender.getName()
-                        +   ChatColor.GOLD + "within 30 seconds or type "
+                        +   ChatColor.GOLD + " within 30 seconds or type "
                         +   ChatColor.RED + "/tpdeny " + sender.getName()
                         +   ChatColor.GOLD + " to deny it.");
                 sender.sendMessage(
